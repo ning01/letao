@@ -152,4 +152,9 @@ ul {
   background-color: skyblue;
 }
 
+.lt_main .container-fluid .table th,
+.lt_main .container-fluid .table td {
+  text-align: center;
+  vertical-align: middle;
+}
 /* content结束 */
