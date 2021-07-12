@@ -1,6 +1,19 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .body_bg {
   background-color: #222d32;
 }
+
 .panel-title {
   height: 40px;
   line-height: 40px;
@@ -10,3 +23,122 @@
 .m_t {
   margin-top: 150px;
 }
+.mt_20 {
+  margin-top: 20px;
+}
+.red {
+  color: #a94442;
+}
+/* lf_aside开始 */
+.lt_aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222d32;
+  z-index: 999;
+  transition: all 1s;
+}
+.lt_aside.hidemenu {
+  left: -180px;
+}
+.brank {
+  width: 180px;
+  height: 50px;
+  background-color: #367fa9;
+}
+.brank a {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+}
+.user {
+  height: 180px;
+  padding-top: 30px;
+}
+.user img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.user p {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.lt_aside .nav li a {
+  display: block;
+  height: 40 px;
+  padding-left: 40px;
+  line-height: 40px;
+  border-left: 3px solid transparent;
+}
+.lt_aside .nav li a.current {
+  background-color: #1d1f21;
+  border-left: 3px solid blue;
+}
+.lt_aside .nav li i {
+  margin-right: 5px;
+}
+.lt_aside .nav li .child {
+  display: none;
+}
+.lt_aside .nav li .child a {
+  padding-left: 60px;
+}
+/* lf_aside结束 */
+/* it_main开始 */
+.lt_main {
+  height: 1000px;
+  background-color: pink;
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: all 1s;
+}
+.lt_main.hidemenu {
+  padding-left: 0;
+}
+.lt_main .lt_topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #3c8dbc;
+  padding-left: 180px;
+  transition: all 1s;
+}
+.lt_main .lt_topbar.hidemenu {
+  padding-left: 0;
+}
+.lt_main .lt_topbar .icon_left,
+.lt_main .lt_topbar .icon_right {
+  width: 50px;
+  height: 50px;
+  /* background-color: yellow; */
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  line-height: 50px;
+}
+
+.lt_main .lt_topbar .icon_left {
+  float: left;
+}
+.lt_main .lt_topbar .icon_right {
+  float: right;
+}
+
+/* it_main结束 */
+/* container开始 */
+
+.container-fluid li a {
+  color: #3c8dbc;
+}
+/* container结束 */
