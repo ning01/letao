@@ -83,6 +83,7 @@ ul {
   background-color: #1d1f21;
   border-left: 3px solid blue;
 }
+
 .lt_aside .nav li i {
   margin-right: 5px;
 }
@@ -112,6 +113,7 @@ ul {
   width: 100%;
   background-color: #3c8dbc;
   padding-left: 180px;
+  z-index: 99;
   transition: all 1s;
 }
 .lt_main .lt_topbar.hidemenu {
@@ -142,3 +144,12 @@ ul {
   color: #3c8dbc;
 }
 /* container结束 */
+/* content开始 */
+.echarts_left,
+.echarts_right {
+  width: 48%;
+  height: 400px;
+  background-color: skyblue;
+}
+
+/* content结束 */

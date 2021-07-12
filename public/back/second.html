@@ -22,7 +22,7 @@
       <div class="nav">
         <ul>
           <li>
-            <a class="current" href="user.html">
+            <a href="user.html">
               <i class="glyphicon glyphicon-user"></i>
               <span>用户管理</span>
             </a>
@@ -32,9 +32,9 @@
               <i class="glyphicon glyphicon-list"></i>
               <span>分类管理</span>
             </a>
-            <div class="child">
+            <div class="child" style="display: block">
               <a href="first.html">一类分类</a>
-              <a href="second.html">二类分类</a>
+              <a class="current" href="second.html">二类分类</a>
             </div>
           </li>
           <li>
@@ -60,14 +60,10 @@
       <!-- container响应式版心, container-fluid流失布局容器(宽度100%,默认左右padding15px) -->
       <div class="container-fluid">
         <ol class="breadcrumb mt_20">
-          <li><a href="user.html">管理系统</a></li>
-          <li class="active">首页</li>
+          <li><a href="index.html">管理系统</a></li>
+          <li class="active">分类管理</li>
+          <li class="active"><a href="second">二级分类</a></li>
         </ol>
-        <!--内容部分 -->
-        <div class="content">
-          <div class="echarts_left pull-left"></div>
-          <div class="echarts_right pull-right"></div>
-        </div>
       </div>
     </div>
     <!-- 退出模态框 -->
@@ -102,10 +98,8 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
 
     <script src="./js/common.js"></script>
     <script src="./js/isLogin.js"></script>
-    <script src="./js/index.js"></script>
   </body>
 </html>
