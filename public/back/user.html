@@ -83,9 +83,10 @@
         </div>
       </div>
     </div>
-    <!-- 退出模态框 -->
+
+    <!-- 启用禁用模态框 -->
     <!-- 外层蒙层 -->
-    <div class="modal fade" tabindex="-1" id="logoutModal">
+    <div class="modal fade" tabindex="-1" id="userModal">
       <!-- 里面模态框 -->
       <div class="modal-dialog modal-sm">
         <!-- 模态框内容 -->
@@ -97,7 +98,33 @@
           </div>
           <!-- 中间 -->
           <div class="modal-body">
-            <p class="red"><i class="glyphicon glyphicon-info-sign"></i><span>你确定要退出后台管理系统吗?</span></p>
+            <p class="red"><i class="glyphicon glyphicon-info-sign"></i><span>你确定要执行此操作吗？</span></p>
+          </div>
+          <!-- 底部 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" id="confirmBtn">确定</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+
+    <!-- 退出模态框 -->
+    <div class="modal fade" tabindex="-1" id="logoutModal">
+      <!-- 里面模态框 -->
+      <div class="modal-dialog modal-sm">
+        <!-- 模态框内容 -->
+        <div class="modal-content">
+          <!-- 头部 -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>你确定要退出后台管理系统吗?</button>
+            <h4 class="modal-title">温馨提示</h4>
+          </div>
+          <!-- 中间 -->
+          <div class="modal-body">
+            <p class="red"><i class="glyphicon glyphicon-info-sign"></i><span></span></p>
           </div>
           <!-- 底部 -->
           <div class="modal-footer">
@@ -105,20 +132,20 @@
             <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
           </div>
         </div>
-        <!-- /.modal-content -->
       </div>
       <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
+
+    <!-- -->
     <!-- 准备模板 -->
     <script type="text/template" id="tmp">
       {{each rows v i}}
-          <tr>
+          <tr >
             <td>{{i+1+(page-1)*size}}</td>
             <td>{{v.username}}</td>
             <td>{{v.mobile}}/td>
             <td>{{v.isDelete === 1 ? "正常" : "禁用"}}</td>
-            <td>
+            <td data-id="{{v.id}}">
               {{if v.isDelete===1}}
 
               <button class="btn btn-danger">禁用</button>
