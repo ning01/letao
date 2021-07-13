@@ -66,9 +66,9 @@ $(function () {
 
     //获取用户Id
     currentId = $(this).parent().data("id");
-    console.log(this)
-    console.log(parent)
-    console.log( currentId )
+    // console.log(this)
+    // console.log(parent)
+    // console.log( currentId )
     //获取更改的状态(根据按钮的类名判断)
     //禁用按钮? 0 : 1
     isDelete = $(this).hasClass("btn-danger") ?  0 : 1;
