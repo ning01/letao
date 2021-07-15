@@ -157,5 +157,38 @@ $('#addBtn').click(function () {
       }
     }
   })
-  
+
+  //注册表单校验成功事件,阻止默认的表单提交,通过ajax提交
+  $("#form").on("success.form.bv", function (e) {
+    e.preventDefault();//阻止默认的提交
+    $.ajax({
+      type: "post",
+      url: "/category/addSecondCategory",
+      data: $("#form").serialize(),
+      success: function (info) {
+        console.log(info);
+        if (info.success) {
+          //添加成功,需要关闭模态框
+          $("#addModal").modal('hide');
+          //重新渲染页面,渲染第一页
+          currentPage = 1;
+          render();
+          
+          //完成添加,需要重置内容和状态
+
+          $('#form').data("bootstrapValidator").resetForm(true);
+
+          //由于按钮和图片不是表单内容,需要手动重置
+          $('#dropdownText').text("请选择一级分类");
+          //图片框重置
+          $('#imgbox img').attr("src", "./images/none.png");
+
+        }
+
+      }
+    
+    })
+
+  })
+
  })
