@@ -1,7 +1,7 @@
 $(function () {
   
   var currentPage = 1;
-  var pageSize = 3;
+  var pageSize = 5;
   //1.一进入页面,发送ajax请求,获取数据,进行渲染
   render();
 
