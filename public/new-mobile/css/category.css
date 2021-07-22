@@ -1,0 +1,45 @@
+.category_left {
+  float: left;
+  width: 90px;
+  height: 100%;
+
+  /* background-color: yellow; */
+  position: relative;
+}
+.category_right {
+  height: 100%;
+  overflow: hidden;
+  /* background-color: pink; */
+  position: relative;
+}
+
+.category_left li a {
+  height: 50px;
+  width: 90px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #e3e4e5;
+  display: block;
+  color: #666;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.category_left li a.current {
+  background-color: #fff;
+  border-right: none;
+}
+.category_right li {
+  width: 33.3%;
+  float: left;
+}
+.category_right li img {
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
+.category_right li p {
+  text-align: center;
+}
+.nomore {
+  padding: 10px;
+}
