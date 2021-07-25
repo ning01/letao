@@ -141,6 +141,9 @@ img {
   text-align: left;
   height: 40px;
 }
+.product_item a {
+  display: block;
+}
 .product_item img {
   width: 130px;
   height: 130px;
