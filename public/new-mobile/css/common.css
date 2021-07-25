@@ -101,3 +101,88 @@ img {
   background-color: #fff;
   position: relative;
 }
+
+.lt_content .lt_search {
+  padding: 10px;
+}
+
+.lt_content .lt_search .input_search {
+  border: 1px solid #007aff;
+  height: 34px;
+  padding-right: 54px;
+  margin: 0;
+  font-size: 12px;
+  position: relative;
+}
+.lt_content .lt_search .btn_search {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+/* 产品部分开始 */
+
+.lt_product {
+  padding: 10px;
+  text-align: center;
+  /* position: relative; */
+}
+.product_item {
+  float: left;
+  width: 48%;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.product_item:nth-child(2n-1) {
+  margin-right: 4%;
+}
+.product_item .info {
+  text-align: left;
+  height: 40px;
+}
+.product_item img {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
+
+.product_item .price {
+  color: #e92322;
+}
+.product_item .oldprice {
+  text-decoration: line-through;
+}
+
+.lt_product button {
+  margin: 0 auto;
+}
+/* 产品部分结束 */
+/* 动画加载开始 */
+.lt_product .loading {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #069;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: rotate 1s infinite ease-in-out;
+}
+
+/* 动画步骤:
+(1)定义动画效果
+(2)使用动画
+animation:动画名称 动画时间  动画次数 动画效果
+*/
+
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+/* 动画加载结束 */
