@@ -10,62 +10,58 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./lib/fa/fonts/fontawesome-webfont.svg" />
     <link rel="icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/user.css" />
   </head>
   <body>
     <!-- 全屏容器 -->
     <div class="lt_container">
+      <!-- 乐淘头部 -->
       <div class="lt_header">
-        <a href="javascript:;" class="icon-left">
-          <i class="fa fa-home"></i>
-        </a>
-
-        <h3>乐淘云购</h3>
-        <a href="#" class="icon-right">
-          <i class="fa fa-search"></i>
-        </a>
+        <a href="javascript:history.go(-1);" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+        <h3>会员中心</h3>
       </div>
-      <div class="lt_content">
-        <!-- 实现区域滚动 -->
+
+      <!-- 乐淘主体 -->
+      <div class="lt_main">
         <div class="mui-scroll-wrapper">
           <div class="mui-scroll">
-            <!--这里放置真实显示的DOM内容-->
-            用户中心 用户中心 用户中心 用户中心 用户中心
+            <ul class="mui-table-view">
+              <!-- 挖个坑 -->
+              <li class="mui-table-view-cell mui-media" id="userInfo"></li>
+              <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">账号与安全</a>
+              </li>
+              <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">我的购物车</a>
+              </li>
+              <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收货地址管理</a>
+              </li>
+            </ul>
+
+            <div class="btn-wrapper">
+              <button class="mui-btn mui-btn-block" id="logout">退出</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="lt_footer">
-        <ul>
-          <li>
-            <a href="index.html">
-              <i class="fa fa-home"></i>
-              <p>首页</p>
-            </a>
-          </li>
-          <li>
-            <a href="category.html">
-              <i class="fa fa-bars"></i>
-              <p>分类页</p>
-            </a>
-          </li>
-          <li>
-            <a href="car.html">
-              <i class="fa fa-shopping-cart"></i>
-              <p>购物车</p>
-            </a>
-          </li>
-          <li>
-            <a class="current" href="#">
-              <i class="fa fa-user"></i>
-              <p>用户中心</p>
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
+    <!-- 准备模板 -->
 
+    <script type="text/template" id="infoTpl">
+
+      <a href="#">
+              <img class="mui-media-object mui-pull-left" src="./images/user.jpg" />
+              <div class="mui-media-body">
+              {{username}}
+                <p class="mui-ellipsis">绑定手机:{{mobile}}</p>
+              </div>
+            </a>
+    </script>
     <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/user.js"></script>
   </body>
 </html>
